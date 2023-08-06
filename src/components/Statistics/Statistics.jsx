@@ -1,17 +1,28 @@
+import {
+    StatisticWrapper,
+    StatisticTitle,
+    StatisticList,
+    StatisticItem,
+    StatisticLable,
+    StatisticPercentage
+} from "./Statistics.styled"
+
+
+
 export const Statistics = ({ title, stats }) => {
     return (
-        <div >
-            <h2>{ title}</h2>
+        <StatisticWrapper >
+            <StatisticTitle>{ title}</StatisticTitle>
 
-  <ul >
+            <StatisticList >
                 {stats.map(({ id, label, percentage }) => {
-                    return (<li key={id}>
-                        <span>{label}</span>
-                        <span>{percentage}</span>
-                    </li>)
+                    return (<StatisticItem key={id}>
+                        <StatisticLable>{label}</StatisticLable>
+                        <StatisticPercentage>{percentage}%</StatisticPercentage>
+                    </StatisticItem>)
                 }
                 )}
-  </ul>
-</div>
+           </StatisticList>
+       </StatisticWrapper>
     )
 }

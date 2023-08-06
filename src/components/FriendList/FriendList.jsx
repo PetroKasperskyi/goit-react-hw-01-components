@@ -1,7 +1,10 @@
 import { FriendItem } from "./FriendItem"
+import { FriendWrapper } from "./FriendList.styled"
+
+
 export const FriendList = ({ friends }) => {
     return (
-        <ul>
+        <FriendWrapper>
             {
                 friends.map(({ id, name, avatar, isOnline }) => {
                     return (
@@ -14,6 +17,6 @@ export const FriendList = ({ friends }) => {
                     )
                 })
             }
-        </ul>
+        </FriendWrapper>
     )
 }

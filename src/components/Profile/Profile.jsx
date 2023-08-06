@@ -1,3 +1,5 @@
+import { ProfileContainer, ProfileDescription, ProfileImage, ProfileLocation, ProfileTag,  ProfileName, ProfileList, ProfileItem, ProfileSubtitle, ProfileStats} from "./Profile.styled";
+
 export const Profile = ({ user }) => {
     const {
         username,
@@ -8,32 +10,32 @@ export const Profile = ({ user }) => {
     } = user;
     
     return (
-        <div >
-            <div >
-                <img
+        <ProfileContainer >
+            <ProfileDescription>
+                <ProfileImage
                     src={avatar}
                     alt={username}
       
                 />
-                <p >{username}</p>
-                <p > @{tag} </p>
-                <p > {location} </p>
-            </div>
+                <ProfileName>{username}</ProfileName>
+                <ProfileTag > @{tag} </ProfileTag>
+                <ProfileLocation > {location} </ProfileLocation>
+            </ProfileDescription>
 
-            <ul >
-                <li>
-                    <span >Followers</span>
-                    <span > {followers} </span>
-                </li>
-                <li>
-                    <span >Views</span>
-                    <span > {views} </span>
-                </li>
-                <li>
-                    <span >Likes</span>
-                    <span > {likes} </span>
-                </li>
-            </ul>
-        </div>
+            <ProfileList>
+                <ProfileItem>
+                    <ProfileSubtitle>Followers</ProfileSubtitle>
+                    <ProfileStats > {followers} </ProfileStats>
+                </ProfileItem>
+                <ProfileItem>
+                    <ProfileSubtitle>Views</ProfileSubtitle>
+                    <ProfileStats > {views} </ProfileStats>
+                </ProfileItem>
+                <ProfileItem>
+                    <ProfileSubtitle >Likes</ProfileSubtitle>
+                    <ProfileStats > {likes} </ProfileStats>
+                </ProfileItem>
+            </ProfileList>
+        </ProfileContainer>
     )
 }
