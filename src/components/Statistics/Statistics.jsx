@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
     StatisticWrapper,
     StatisticTitle,
@@ -26,3 +27,8 @@ export const Statistics = ({ title, stats }) => {
        </StatisticWrapper>
     )
 }
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
+};
