@@ -13,6 +13,12 @@ margin: 0;
   width: 500px;
   background-color: #ffe ;
   border: 1px solid #0505;
+  cursor: pointer;
+
+:hover {
+  background-color: violet ;
+  color: white;
+}
 `;
 
 export const FriendsItem = styled.li`
@@ -21,7 +27,6 @@ display: flex;
   gap: 20px;
   padding: 5px 10px 5px 20px;
 border: 1px solid #0505;
-
 
 `;
 export const FriendOn = styled.span`

@@ -39,3 +39,7 @@ export const Profile = ({ user }) => {
         </ProfileContainer>
     )
 }
+
+Profile.propTypes = {
+  user: PropTypes.object.isRequired,
+};
